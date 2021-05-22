@@ -23,6 +23,14 @@ node {
         // when running in multi-branch job, one must issue this command
         checkout scm
     }
+
+        stage('Install NPM Modules') {
+            echo "Installing sfdx-cli"
+	    bat "npm install --global sfdx-cli"  
+	    bat "npm i @salesforce/sfdx-scanner"	
+        }
+
+	
 	
 
 //	Static code analysis		
