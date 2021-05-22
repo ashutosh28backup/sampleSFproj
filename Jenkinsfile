@@ -24,6 +24,7 @@ node {
         checkout scm
     }
 
+// Install SFDX
         stage('Install NPM Modules') {
             echo "Installing sfdx-cli"
 	    bat "npm install --global sfdx-cli"  
